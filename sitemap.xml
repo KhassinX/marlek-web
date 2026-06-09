@@ -49,4 +49,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://marlek.khassinx.com/en/security/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://marlek.khassinx.com/security/"/>
   </url>
+  <url>
+    <loc>https://marlek.khassinx.com/terminos/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://marlek.khassinx.com/terminos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marlek.khassinx.com/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marlek.khassinx.com/terminos/"/>
+  </url>
+  <url>
+    <loc>https://marlek.khassinx.com/en/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://marlek.khassinx.com/terminos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marlek.khassinx.com/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marlek.khassinx.com/terminos/"/>
+  </url>
 </urlset>
