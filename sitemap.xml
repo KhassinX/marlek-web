@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://marlek.khassinx.com/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://marlek.khassinx.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marlek.khassinx.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marlek.khassinx.com/"/>
+  </url>
+  <url>
+    <loc>https://marlek.khassinx.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://marlek.khassinx.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marlek.khassinx.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marlek.khassinx.com/"/>
+  </url>
+  <url>
+    <loc>https://marlek.khassinx.com/privacidad/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://marlek.khassinx.com/privacidad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marlek.khassinx.com/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marlek.khassinx.com/privacidad/"/>
+  </url>
+  <url>
+    <loc>https://marlek.khassinx.com/en/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://marlek.khassinx.com/privacidad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marlek.khassinx.com/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marlek.khassinx.com/privacidad/"/>
+  </url>
+  <url>
+    <loc>https://marlek.khassinx.com/soporte/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://marlek.khassinx.com/soporte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marlek.khassinx.com/en/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marlek.khassinx.com/soporte/"/>
+  </url>
+  <url>
+    <loc>https://marlek.khassinx.com/en/support/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://marlek.khassinx.com/soporte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marlek.khassinx.com/en/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marlek.khassinx.com/soporte/"/>
+  </url>
+  <url>
+    <loc>https://marlek.khassinx.com/security/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://marlek.khassinx.com/security/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marlek.khassinx.com/en/security/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marlek.khassinx.com/security/"/>
+  </url>
+  <url>
+    <loc>https://marlek.khassinx.com/en/security/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://marlek.khassinx.com/security/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marlek.khassinx.com/en/security/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marlek.khassinx.com/security/"/>
+  </url>
+</urlset>

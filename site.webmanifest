@@ -1,0 +1,18 @@
+{
+  "name": "Marlek",
+  "short_name": "Marlek",
+  "description": "Tu propio código secreto: traduce del español a Marlek y de vuelta.",
+  "start_url": "/",
+  "id": "/",
+  "scope": "/",
+  "lang": "es",
+  "display": "standalone",
+  "theme_color": "#07120D",
+  "background_color": "#04241A",
+  "icons": [
+    { "src": "/assets/favicons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/favicons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/favicons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/assets/favicons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

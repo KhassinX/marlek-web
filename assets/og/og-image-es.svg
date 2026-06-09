@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Marlek — tu propio código secreto">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#04241A"/>
+      <stop offset="0.55" stop-color="#0A3D2A"/>
+      <stop offset="1" stop-color="#0E5538"/>
+    </linearGradient>
+    <linearGradient id="bub" x1="0" y1="0" x2="280" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1FA86B"/>
+      <stop offset="1" stop-color="#117A49"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Icon mark, left -->
+  <g transform="translate(120,165) scale(0.293)">
+    <rect width="1024" height="1024" rx="230" fill="#06311F"/>
+    <path d="M330 600 L296 784 L470 642 Z" fill="url(#bub)"/>
+    <rect x="192" y="232" width="640" height="424" rx="116" fill="url(#bub)"/>
+    <g filter="url(#glow)">
+      <polyline points="396,548 396,344 512,470 628,344 628,548" fill="none" stroke="#5BFB6A" stroke-width="62" stroke-linecap="round" stroke-linejoin="round"/>
+      <g fill="none" stroke="#5BFB6A" stroke-width="15" stroke-linecap="round">
+        <circle cx="700" cy="486" r="30"/><line x1="700" y1="454" x2="700" y2="518"/>
+      </g>
+      <circle cx="736" cy="462" r="9" fill="#5BFB6A"/>
+    </g>
+  </g>
+  <!-- Text, right -->
+  <g font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif">
+    <text x="500" y="270" fill="#ECF7F0" font-size="84" font-weight="700" letter-spacing="-2">Marlek</text>
+    <text x="500" y="350" fill="#5BFB6A" font-size="40" font-weight="600">Tu propio código secreto</text>
+    <text x="500" y="410" fill="#A6BBB0" font-size="30" font-weight="400">Traduce del español a un código de</text>
+    <text x="500" y="450" fill="#A6BBB0" font-size="30" font-weight="400">emojis y símbolos — y de vuelta.</text>
+    <text x="500" y="525" fill="#7E948A" font-size="24" font-weight="400">iPhone · iPad  ·  creado por Slime@YT</text>
+  </g>
+</svg>

@@ -1,0 +1,552 @@
+/*
+ * marlek.css — Marlek web stylesheet (marlek.khassinx.com)
+ *
+ * Combines Layer 2 (Marlek "secret code" green brand tokens) + Layer 3 (KhassinX
+ * shared primitives) into one self-contained file so the site deploys as plain
+ * static HTML on GitHub Pages without a Jekyll include pipeline.
+ *
+ * Brand origin: Marlek — a 1:1 emoji/symbol substitution cipher invented by its
+ * creator (public handle Slime@YT). "Secret code" neon green.
+ *   - Icon bg gradient: #04241A -> #0A3D2A -> #0E5538 (deep forest)
+ *   - Chat bubble:      #1FA86B -> #117A49
+ *   - Neon "M" / cipher mark: #5BFB6A
+ *   - App tint (light/dark): #0E6B40 light / #5BFB6A dark
+ *
+ * Mirrors BRAND_SYSTEM.md §1 3-layer doctrine + primitives.css verbatim structure.
+ * IP belongs to the creator. Published by KHASSINX LLC.
+ */
+
+/* ═══════════════ Layer 2 — Marlek brand tokens ═══════════════ */
+
+:root {
+  /* ── Light theme (default — Apple canon surfaces, Marlek green accent) ── */
+
+  /* Backgrounds (Apple canon) */
+  --marlek-bg: #FFFFFF;
+  --marlek-bg-section: #F2F7F3;        /* faint green-tinted section */
+  --marlek-bg-card: #FBFEFC;
+  --marlek-bg-elevated: #FFFFFF;
+
+  /* Text (Apple canon) */
+  --marlek-text-primary: #102018;       /* near-black, faint green cast */
+  --marlek-text-secondary: #4B5A52;
+  --marlek-text-tertiary: #7A8A82;
+  --marlek-text-disabled: #C2CCC7;
+
+  /* Accents — Marlek "secret code" green (matches app BrandColor + .icon bundle) */
+  --marlek-accent: #0E6B40;             /* deep code green — CTA/link. WCAG AA on white ~6.0:1 */
+  --marlek-accent-strong: #0A5230;      /* hover/active darker */
+  --marlek-accent-soft: #E4F4EA;        /* subtle green wash */
+  --marlek-neon: #1FA86B;               /* bubble teal-green — decorative borders/badges */
+
+  /* Borders (Apple hairline) */
+  --marlek-border: #D5E0DA;
+  --marlek-border-strong: #7A8A82;
+
+  /* Status (Apple system colors) */
+  --marlek-success: #34C759;
+  --marlek-warning: #FF9500;
+  --marlek-danger: #FF3B30;
+
+  /* Icon field gradient (reused in hero badge) */
+  --marlek-field-1: #04241A;
+  --marlek-field-2: #0A3D2A;
+  --marlek-field-3: #0E5538;
+  --marlek-bubble-1: #1FA86B;
+  --marlek-bubble-2: #117A49;
+  --marlek-glow: #5BFB6A;
+
+  /* ── Re-bind to Layer 1 token names so primitives below work ── */
+  --khassinx-bg: var(--marlek-bg);
+  --khassinx-bg-section: var(--marlek-bg-section);
+  --khassinx-bg-card: var(--marlek-bg-card);
+  --khassinx-bg-elevated: var(--marlek-bg-elevated);
+  --khassinx-text-primary: var(--marlek-text-primary);
+  --khassinx-text-secondary: var(--marlek-text-secondary);
+  --khassinx-text-tertiary: var(--marlek-text-tertiary);
+  --khassinx-text-disabled: var(--marlek-text-disabled);
+  --khassinx-accent: var(--marlek-accent);
+  --khassinx-accent-strong: var(--marlek-accent-strong);
+  --khassinx-accent-soft: var(--marlek-accent-soft);
+  --khassinx-border: var(--marlek-border);
+  --khassinx-border-strong: var(--marlek-border-strong);
+  --khassinx-success: var(--marlek-success);
+  --khassinx-warning: var(--marlek-warning);
+  --khassinx-danger: var(--marlek-danger);
+
+  /* ── Spacing scale (Apple-grade) ── */
+  --space-xs: 4px;
+  --space-s: 8px;
+  --space-m: 12px;
+  --space-md: 16px;
+  --space-lg: 20px;
+  --space-xl: 24px;
+  --space-2xl: 32px;
+  --space-3xl: 48px;
+  --space-4xl: 64px;
+  --space-5xl: 96px;
+  --space-6xl: 128px;
+  --space-7xl: 160px;
+  --space-8xl: 200px;
+
+  /* Container max-widths (Apple-canonical 980px) */
+  --container-narrow: 640px;
+  --container-default: 980px;
+  --container-wide: 1280px;
+
+  /* Border radius (Apple soft corners) */
+  --radius-s: 6px;
+  --radius-m: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 22px;
+  --radius-2xl: 28px;
+  --radius-pill: 999px;
+
+  /* Typography (Apple canon) */
+  --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", Menlo, Consolas, monospace;
+
+  --fs-display-xl: 80px;
+  --fs-display-l: 56px;
+  --fs-display-m: 40px;
+  --fs-display-s: 32px;
+  --fs-h1: 48px;
+  --fs-h2: 32px;
+  --fs-h3: 24px;
+  --fs-h4: 19px;
+  --fs-body-l: 19px;
+  --fs-body: 17px;
+  --fs-body-s: 15px;
+  --fs-caption: 13px;
+  --fs-micro: 11px;
+
+  /* Shadows (Apple-canonical subtle) */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 12px 32px rgba(4, 36, 26, 0.10);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+}
+
+/* ── Dark theme (auto via prefers-color-scheme — neon code-green identity) ── */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --marlek-bg: #07120D;               /* deep forest, OLED-friendly */
+    --marlek-bg-section: #0C1C14;
+    --marlek-bg-card: #102219;
+    --marlek-bg-elevated: #14291E;
+
+    --marlek-text-primary: #ECF7F0;
+    --marlek-text-secondary: #A6BBB0;
+    --marlek-text-tertiary: #7E948A;
+    --marlek-text-disabled: #455048;
+
+    --marlek-accent: #5BFB6A;           /* neon code green — the signature */
+    --marlek-accent-strong: #84FF90;
+    --marlek-accent-soft: #112B1C;
+    --marlek-neon: #5BFB6A;
+
+    --marlek-border: #1E3A2B;
+    --marlek-border-strong: #2C5240;
+
+    --marlek-success: #30D158;
+    --marlek-warning: #FF9F0A;
+    --marlek-danger: #FF453A;
+
+    /* Re-bind to Layer 1 names */
+    --khassinx-bg: var(--marlek-bg);
+    --khassinx-bg-section: var(--marlek-bg-section);
+    --khassinx-bg-card: var(--marlek-bg-card);
+    --khassinx-bg-elevated: var(--marlek-bg-elevated);
+    --khassinx-text-primary: var(--marlek-text-primary);
+    --khassinx-text-secondary: var(--marlek-text-secondary);
+    --khassinx-text-tertiary: var(--marlek-text-tertiary);
+    --khassinx-text-disabled: var(--marlek-text-disabled);
+    --khassinx-accent: var(--marlek-accent);
+    --khassinx-accent-strong: var(--marlek-accent-strong);
+    --khassinx-accent-soft: var(--marlek-accent-soft);
+    --khassinx-border: var(--marlek-border);
+    --khassinx-border-strong: var(--marlek-border-strong);
+    --khassinx-success: var(--marlek-success);
+    --khassinx-warning: var(--marlek-warning);
+    --khassinx-danger: var(--marlek-danger);
+
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* ═══════════════ Layer 3 — KhassinX shared primitives ═══════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; font-size: 100%; }
+
+body {
+  font-family: var(--font-stack);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: 1.47;
+  color: var(--khassinx-text-primary);
+  background: var(--khassinx-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: -0.003em;
+}
+
+main { flex: 1; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--khassinx-text-primary);
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  line-height: 1.15;
+}
+h1 { font-size: clamp(2rem, 5vw, var(--fs-h1)); letter-spacing: -0.012em; }
+h2 { font-size: clamp(1.75rem, 4vw, var(--fs-h2)); letter-spacing: -0.008em; line-height: 1.2; }
+h3 { font-size: var(--fs-h3); font-weight: 600; letter-spacing: -0.003em; line-height: 1.27; }
+
+p { margin-bottom: var(--space-md); color: var(--khassinx-text-primary); }
+p:last-child { margin-bottom: 0; }
+
+a { color: var(--khassinx-accent); text-decoration: none; transition: color var(--transition-fast); }
+a:hover { color: var(--khassinx-accent-strong); text-decoration: underline; text-underline-offset: 2px; }
+
+strong { font-weight: 600; }
+em { font-style: italic; }
+
+code, pre { font-family: var(--font-mono); font-size: var(--fs-body-s); }
+code {
+  background: var(--khassinx-bg-section);
+  padding: 2px 6px;
+  border-radius: var(--radius-s);
+  font-size: 0.92em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--khassinx-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-s);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--khassinx-text-primary);
+  color: var(--khassinx-bg);
+  padding: var(--space-s) var(--space-md);
+  z-index: 999;
+  font-size: var(--fs-body-s);
+  font-weight: 500;
+  border-radius: 0 0 var(--radius-m) 0;
+}
+.skip-link:focus { left: 0; top: 0; }
+
+.container {
+  width: 100%;
+  max-width: var(--container-default);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+.container-narrow { max-width: var(--container-narrow); }
+
+@media (min-width: 768px) {
+  .container { padding: 0 var(--space-2xl); }
+}
+
+/* ── Header / Nav ── */
+.site-header {
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--khassinx-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: saturate(180%) blur(20px);
+  background: rgba(255, 255, 255, 0.72);
+}
+@media (prefers-color-scheme: dark) {
+  .site-header { background: rgba(7, 18, 13, 0.72); }
+}
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+  font-weight: 600;
+  font-size: var(--fs-body);
+  letter-spacing: -0.012em;
+  color: var(--khassinx-text-primary);
+  text-decoration: none;
+}
+.logo:hover { text-decoration: none; color: var(--khassinx-text-primary); }
+.logo img { height: 28px; width: 28px; border-radius: 7px; }
+.site-nav { display: flex; gap: var(--space-xl); align-items: center; }
+.site-nav a {
+  color: var(--khassinx-text-primary);
+  font-size: var(--fs-body-s);
+  font-weight: 400;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: -0.003em;
+}
+.site-nav a:hover { color: var(--khassinx-accent); text-decoration: none; }
+@media (max-width: 520px) {
+  .site-header .container { flex-direction: column; align-items: flex-start; }
+  .site-nav { width: 100%; flex-wrap: wrap; gap: var(--space-md); }
+}
+
+/* ── Hero ── */
+.hero { padding: var(--space-5xl) 0 var(--space-4xl); text-align: center; }
+@media (min-width: 768px) { .hero { padding: var(--space-6xl) 0 var(--space-5xl); } }
+.hero h1 {
+  font-size: clamp(2.5rem, 7vw, var(--fs-display-xl));
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  margin-bottom: var(--space-lg);
+  color: var(--khassinx-text-primary);
+}
+.hero .lead {
+  font-size: clamp(1.125rem, 2.5vw, var(--fs-body-l));
+  font-weight: 400;
+  color: var(--khassinx-text-secondary);
+  max-width: 600px;
+  margin: 0 auto var(--space-2xl);
+  line-height: 1.38;
+  letter-spacing: -0.003em;
+}
+.hero .cta { display: flex; justify-content: center; gap: var(--space-md); flex-wrap: wrap; margin-top: var(--space-xl); }
+
+/* Hero brand badge (icon artwork on the deep-green field) */
+.brand-badge {
+  width: 132px;
+  height: 132px;
+  margin: 0 auto var(--space-xl);
+  border-radius: 29.5%;
+  box-shadow: var(--shadow-lg);
+  display: block;
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-s);
+  min-height: 48px;
+  padding: var(--space-m) var(--space-xl);
+  font-family: var(--font-stack);
+  font-size: var(--fs-body);
+  font-weight: 600;
+  letter-spacing: -0.003em;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn-primary { background: var(--khassinx-accent); color: #04241A; }
+@media (prefers-color-scheme: dark) { .btn-primary { color: #04140C; } }
+.btn-primary:hover { background: var(--khassinx-accent-strong); text-decoration: none; transform: translateY(-1px); }
+.btn-secondary { background: transparent; color: var(--khassinx-accent); border-color: var(--khassinx-accent); }
+.btn-secondary:hover { background: var(--khassinx-accent-soft); color: var(--khassinx-accent-strong); text-decoration: none; }
+.btn[aria-disabled="true"] { opacity: 0.55; pointer-events: none; }
+
+/* ── Card ── */
+.card {
+  background: var(--khassinx-bg-card);
+  border: 1px solid var(--khassinx-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  transition: transform var(--transition-base);
+}
+.card .emoji { font-size: 32px; line-height: 1; display: block; margin-bottom: var(--space-m); }
+.card h3 { margin-bottom: var(--space-m); color: var(--khassinx-text-primary); font-size: var(--fs-h3); letter-spacing: -0.003em; }
+.card p { color: var(--khassinx-text-secondary); font-size: var(--fs-body); line-height: 1.47; }
+.cards-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); margin-top: var(--space-2xl); }
+@media (min-width: 768px) { .cards-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 980px) { .cards-grid.cols-4 { grid-template-columns: repeat(4, 1fr); } }
+
+/* ── Section ── */
+.section { padding: var(--space-5xl) 0; }
+@media (min-width: 768px) { .section { padding: var(--space-6xl) 0; } }
+.section-tinted { background: var(--khassinx-bg-section); }
+.section h2 {
+  text-align: center;
+  margin-bottom: var(--space-md);
+  font-size: clamp(2rem, 4.5vw, var(--fs-display-m));
+  font-weight: 600;
+  letter-spacing: -0.018em;
+  line-height: 1.1;
+}
+.section .section-lead {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto var(--space-2xl);
+  color: var(--khassinx-text-secondary);
+  font-size: var(--fs-body-l);
+}
+
+/* ── Cipher demo strip (playful) ── */
+.cipher-demo {
+  max-width: 560px;
+  margin: var(--space-2xl) auto 0;
+  background: var(--khassinx-bg-card);
+  border: 1px solid var(--khassinx-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  text-align: center;
+}
+.cipher-demo .plain { font-size: var(--fs-h3); font-weight: 600; color: var(--khassinx-text-primary); }
+.cipher-demo .arrow { font-size: var(--fs-h3); color: var(--khassinx-accent); margin: var(--space-s) 0; display: block; }
+.cipher-demo .secret { font-size: 28px; line-height: 1.4; letter-spacing: 4px; }
+.cipher-demo .caption { margin-top: var(--space-md); font-size: var(--fs-caption); color: var(--khassinx-text-tertiary); }
+
+/* ── FAQ ── */
+.faq { max-width: 720px; margin: 0 auto; }
+.faq details {
+  border-bottom: 1px solid var(--khassinx-border);
+  padding: var(--space-md) 0;
+}
+.faq summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--fs-body-l);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--khassinx-accent); font-size: var(--fs-h3); transition: transform var(--transition-fast); }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { margin-top: var(--space-md); color: var(--khassinx-text-secondary); }
+
+/* ── Steps (support) ── */
+.steps { max-width: 720px; margin: var(--space-2xl) auto 0; counter-reset: step; list-style: none; }
+.steps li {
+  position: relative;
+  padding: var(--space-md) 0 var(--space-md) var(--space-4xl);
+  border-bottom: 1px solid var(--khassinx-border);
+}
+.steps li:last-child { border-bottom: none; }
+.steps li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: var(--space-md);
+  width: 40px;
+  height: 40px;
+  background: var(--khassinx-accent-soft);
+  color: var(--khassinx-accent);
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+.steps li strong { display: block; margin-bottom: var(--space-xs); }
+.steps li span { color: var(--khassinx-text-secondary); }
+
+/* ── Creator credit ── */
+.credit {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto;
+}
+.credit .handle { font-size: var(--fs-h2); font-weight: 700; color: var(--khassinx-accent); }
+.credit .handle-cipher { font-size: var(--fs-h3); letter-spacing: 3px; margin-top: var(--space-s); }
+.credit .role { color: var(--khassinx-text-secondary); margin-top: var(--space-s); }
+
+/* ── Prose (legal / support pages) ── */
+.prose { max-width: 720px; margin: 0 auto; font-size: var(--fs-body); line-height: 1.55; color: var(--khassinx-text-primary); }
+.prose h1 { font-size: clamp(2rem, 5vw, var(--fs-h1)); margin-bottom: var(--space-s); }
+.prose .updated { color: var(--khassinx-text-tertiary); font-size: var(--fs-body-s); margin-bottom: var(--space-2xl); display: block; }
+.prose h2 { margin-top: var(--space-3xl); margin-bottom: var(--space-md); font-size: var(--fs-h2); text-align: left; }
+.prose h3 { margin-top: var(--space-2xl); margin-bottom: var(--space-m); font-size: var(--fs-h3); }
+.prose p, .prose ul, .prose ol { margin-bottom: var(--space-md); }
+.prose ul, .prose ol { padding-left: var(--space-xl); }
+.prose li { margin-bottom: var(--space-s); }
+.prose blockquote {
+  border-left: 3px solid var(--khassinx-accent);
+  padding-left: var(--space-md);
+  margin: var(--space-lg) 0;
+  color: var(--khassinx-text-secondary);
+}
+.prose hr { border: none; border-top: 1px solid var(--khassinx-border); margin: var(--space-2xl) 0; }
+.callout {
+  background: var(--khassinx-accent-soft);
+  border: 1px solid var(--khassinx-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin: var(--space-lg) 0;
+}
+.callout p { margin: 0; }
+
+/* ── Footer ── */
+.site-footer {
+  padding: var(--space-2xl) 0;
+  border-top: 1px solid var(--khassinx-border);
+  background: var(--khassinx-bg-section);
+  color: var(--khassinx-text-secondary);
+  font-size: var(--fs-body-s);
+}
+.site-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+.site-footer nav { display: flex; gap: var(--space-md); flex-wrap: wrap; }
+.site-footer nav a {
+  color: var(--khassinx-text-secondary);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--fs-body-s);
+}
+.site-footer nav a:hover { color: var(--khassinx-text-primary); text-decoration: none; }
+.footer-copyright { font-weight: 500; }
+.locale-switcher { display: inline-flex; gap: var(--space-xs); align-items: center; color: var(--khassinx-text-tertiary); }
+.locale-switcher [aria-current="true"] { color: var(--khassinx-text-primary); font-weight: 600; }
+.footer-ecosystem {
+  display: block;
+  width: 100%;
+  margin-top: var(--space-md);
+  font-size: var(--fs-caption);
+  color: var(--khassinx-text-tertiary);
+}
+
+/* ── Utility ── */
+.text-center { text-align: center; }
+.text-secondary { color: var(--khassinx-text-secondary); }
+.text-tertiary { color: var(--khassinx-text-tertiary); }
+.mt-xl { margin-top: var(--space-xl); }
+.mt-2xl { margin-top: var(--space-2xl); }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
