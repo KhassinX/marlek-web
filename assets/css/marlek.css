@@ -30,7 +30,7 @@
   /* Text (Apple canon) */
   --marlek-text-primary: #102018;       /* near-black, faint green cast */
   --marlek-text-secondary: #4B5A52;
-  --marlek-text-tertiary: #7A8A82;
+  --marlek-text-tertiary: #63726B;      /* WCAG AA 5.06:1 on white (era #7A8A82 = 3.64:1, fallaba AA en captions/fechas) */
   --marlek-text-disabled: #C2CCC7;
 
   /* Accents — Marlek "secret code" green (matches app BrandColor + .icon bundle) */
