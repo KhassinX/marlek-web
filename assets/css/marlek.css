@@ -7,10 +7,11 @@
  *
  * Brand origin: Marlek — a 1:1 emoji/symbol substitution cipher invented by its
  * creator (public handle Slime@YT). "Secret code" neon green.
+ *   - Icon: "Cipher M" v3 — flat 2D M whose central vertex is a key (the cipher)
+ *     plus 4 terminal nodes; neon-green symbol on a deep-forest gradient field.
  *   - Icon bg gradient: #04241A -> #0A3D2A -> #0E5538 (deep forest)
- *   - Chat bubble:      #1FA86B -> #117A49
- *   - Neon "M" / cipher mark: #5BFB6A
- *   - App tint (light/dark): #0E6B40 light / #5BFB6A dark
+ *   - Cipher M / node mark: #5BFB6A (neon — decorative / dark-mode signature only)
+ *   - App tint (light/dark): #0E6B40 light (WCAG AA 6.57:1 on white) / #5BFB6A dark
  *
  * Mirrors BRAND_SYSTEM.md §1 3-layer doctrine + primitives.css verbatim structure.
  * IP belongs to the creator. Published by KHASSINX LLC.
@@ -33,11 +34,11 @@
   --marlek-text-tertiary: #63726B;      /* WCAG AA 5.06:1 on white (era #7A8A82 = 3.64:1, fallaba AA en captions/fechas) */
   --marlek-text-disabled: #C2CCC7;
 
-  /* Accents — Marlek "secret code" green (matches app BrandColor + .icon bundle) */
-  --marlek-accent: #0E6B40;             /* deep code green — CTA/link. WCAG AA on white ~6.0:1 */
-  --marlek-accent-strong: #0A5230;      /* hover/active darker */
+  /* Accents — Marlek "secret code" green (matches app BrandColor + Cipher M v3 icon) */
+  --marlek-accent: #0E6B40;             /* deep code green — CTA/link/text. WCAG AA 6.57:1 on white */
+  --marlek-accent-strong: #0A5230;      /* hover/active darker — 9.28:1 on white */
   --marlek-accent-soft: #E4F4EA;        /* subtle green wash */
-  --marlek-neon: #1FA86B;               /* bubble teal-green — decorative borders/badges */
+  --marlek-neon: #1FA86B;               /* mid teal-green — decorative borders/badges only (3.06:1, not for text) */
 
   /* Borders (Apple hairline) */
   --marlek-border: #D5E0DA;
@@ -48,13 +49,11 @@
   --marlek-warning: #FF9500;
   --marlek-danger: #FF3B30;
 
-  /* Icon field gradient (reused in hero badge) */
+  /* Icon field gradient (Cipher M v3 deep-forest field — reused in hero badge) */
   --marlek-field-1: #04241A;
   --marlek-field-2: #0A3D2A;
   --marlek-field-3: #0E5538;
-  --marlek-bubble-1: #1FA86B;
-  --marlek-bubble-2: #117A49;
-  --marlek-glow: #5BFB6A;
+  --marlek-glow: #5BFB6A;                /* Cipher M neon-green symbol — decorative / dark-mode signature */
 
   /* ── Re-bind to Layer 1 token names so primitives below work ── */
   --khassinx-bg: var(--marlek-bg);

@@ -5,29 +5,21 @@
       <stop offset="0.55" stop-color="#0A3D2A"/>
       <stop offset="1" stop-color="#0E5538"/>
     </linearGradient>
-    <linearGradient id="bub" x1="192" y1="232" x2="832" y2="680" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#1FA86B"/>
-      <stop offset="1" stop-color="#117A49"/>
-    </linearGradient>
-    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="9" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <clipPath id="sq"><rect x="0" y="0" width="1024" height="1024" rx="230"/></clipPath>
+    <clipPath id="sq"><rect width="1024" height="1024" rx="230"/></clipPath>
   </defs>
   <g clip-path="url(#sq)">
     <rect width="1024" height="1024" fill="url(#bg)"/>
-    <path d="M330 600 L296 784 L470 642 Z" fill="url(#bub)"/>
-    <rect x="192" y="232" width="640" height="424" rx="116" fill="url(#bub)"/>
-    <g filter="url(#glow)">
-      <polyline points="396,548 396,344 512,470 628,344 628,548"
-                fill="none" stroke="#5BFB6A" stroke-width="62"
-                stroke-linecap="round" stroke-linejoin="round"/>
-      <g fill="none" stroke="#5BFB6A" stroke-width="15" stroke-linecap="round">
-        <circle cx="700" cy="486" r="30"/>
-        <line x1="700" y1="454" x2="700" y2="518"/>
-      </g>
-      <circle cx="736" cy="462" r="9" fill="#5BFB6A"/>
+    <g fill="none" stroke="#5BFB6A" stroke-width="76" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="232,780 232,260 457,485"/>
+      <polyline points="792,780 792,260 567,485"/>
     </g>
+    <g fill="#5BFB6A">
+      <circle cx="232" cy="260" r="46"/>
+      <circle cx="792" cy="260" r="46"/>
+      <circle cx="232" cy="780" r="46"/>
+      <circle cx="792" cy="780" r="46"/>
+    </g>
+    <circle cx="512" cy="540" r="78" fill="none" stroke="#5BFB6A" stroke-width="38"/>
+    <circle cx="512" cy="540" r="24" fill="#5BFB6A"/>
   </g>
 </svg>

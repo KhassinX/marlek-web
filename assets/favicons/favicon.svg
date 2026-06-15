@@ -5,22 +5,23 @@
       <stop offset="0.55" stop-color="#0A3D2A"/>
       <stop offset="1" stop-color="#0E5538"/>
     </linearGradient>
-    <linearGradient id="bub" x1="96" y1="116" x2="416" y2="340" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#1FA86B"/>
-      <stop offset="1" stop-color="#117A49"/>
-    </linearGradient>
+    <clipPath id="sq"><rect width="512" height="512" rx="112"/></clipPath>
   </defs>
-  <rect width="512" height="512" rx="114" fill="url(#bg)"/>
-  <path d="M165 300 L148 392 L235 321 Z" fill="url(#bub)"/>
-  <rect x="96" y="116" width="320" height="212" rx="58" fill="url(#bub)"/>
-  <!-- Neon "M" (Marlek monogram) -->
-  <polyline points="170,290 170,158 247,242 324,158 324,290"
-            fill="none" stroke="#5BFB6A" stroke-width="34"
-            stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- Ciphered accent -->
-  <g fill="none" stroke="#5BFB6A" stroke-width="9" stroke-linecap="round">
-    <circle cx="358" cy="226" r="16"/>
-    <line x1="358" y1="208" x2="358" y2="244"/>
+  <g clip-path="url(#sq)">
+    <rect width="512" height="512" fill="url(#bg)"/>
+    <g transform="scale(0.5)">
+      <g fill="none" stroke="#5BFB6A" stroke-width="76" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="232,780 232,260 457,485"/>
+        <polyline points="792,780 792,260 567,485"/>
+      </g>
+      <g fill="#5BFB6A">
+        <circle cx="232" cy="260" r="46"/>
+        <circle cx="792" cy="260" r="46"/>
+        <circle cx="232" cy="780" r="46"/>
+        <circle cx="792" cy="780" r="46"/>
+      </g>
+      <circle cx="512" cy="540" r="78" fill="none" stroke="#5BFB6A" stroke-width="38"/>
+      <circle cx="512" cy="540" r="24" fill="#5BFB6A"/>
+    </g>
   </g>
-  <circle cx="378" cy="212" r="5" fill="#5BFB6A"/>
 </svg>
