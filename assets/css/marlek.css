@@ -360,7 +360,10 @@ code {
   text-decoration: none;
   white-space: nowrap;
 }
-.btn-primary { background: var(--khassinx-accent); color: #04241A; }
+/* Light: white text on the deep-green fill — readable in normal AND :hover
+   (accent #0E6B40 → 6.57:1, accent-strong #0A5230 → 9.28:1). The old dark-green
+   text vanished on the darker hover fill. Dark mode keeps dark text on the neon fill. */
+.btn-primary { background: var(--khassinx-accent); color: #FFFFFF; }
 @media (prefers-color-scheme: dark) { .btn-primary { color: #04140C; } }
 .btn-primary:hover { background: var(--khassinx-accent-strong); text-decoration: none; transform: translateY(-1px); }
 .btn-secondary { background: transparent; color: var(--khassinx-accent); border-color: var(--khassinx-accent); }
