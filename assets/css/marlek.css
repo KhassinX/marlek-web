@@ -537,6 +537,13 @@ code {
   font-size: var(--fs-caption);
   color: var(--khassinx-text-tertiary);
 }
+.footer-trademarks {
+  display: block;
+  width: 100%;
+  margin-top: var(--space-xs);
+  font-size: var(--fs-caption);
+  color: var(--khassinx-text-tertiary);
+}
 
 /* ── Utility ── */
 .text-center { text-align: center; }
