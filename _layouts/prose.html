@@ -1,0 +1,18 @@
+---
+layout: base
+---
+{%- assign ui = site.ui_strings[page.lang] -%}
+<article class="doc wrap">
+  <h1>{{ page.h1 | default: page.title }}</h1>
+  {%- if page.version %}
+  {%- assign eff = page.effective | default: page.updated -%}
+  {%- capture day %}{% include legal-date.html d=eff lang=page.lang %}{% endcapture -%}
+  {%- capture upd %}{% include legal-date.html d=page.updated lang=page.lang %}{% endcapture %}
+  <p class="meta">{{ ui.effective }} {{ day }} · {{ ui.version }} {{ page.version }}{% if upd != day %} · {{ ui.last_updated }} {{ upd }}{% endif %}</p>
+  {%- elsif page.lead %}
+  <p class="meta">{{ page.lead }}</p>
+  {%- endif %}
+  <div class="doc-body prose">
+{{ content }}
+  </div>
+</article>
