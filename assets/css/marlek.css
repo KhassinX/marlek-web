@@ -559,3 +559,10 @@ code {
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+.tm {
+  font-size: 0.62em;
+  vertical-align: 0.35em;
+  opacity: 0.7;
+  font-weight: 500;
+  margin-left: 0.04em;
+}
