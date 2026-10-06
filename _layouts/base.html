@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{%- assign lang_key = page.lang | default: site.lang -%}
+{%- assign nav_items = site.nav[lang_key] -%}
+{%- assign footer_items = site.footer_nav[lang_key] -%}
+{%- assign ui = site.ui_strings[lang_key] -%}
+{%- assign full_title = page.head_title | default: site.title -%}
+{%- if page.title and page.head_title == nil %}{%- assign full_title = page.title | append: ' — ' | append: site.title -%}{%- endif -%}
+{%- assign desc = page.description -%}
+{%- assign og_desc = page.og_description | default: desc -%}
+{%- assign tw_desc = page.twitter_description | default: og_desc -%}
+{%- assign og_image = page.og_image | default: site.og_image_default[lang_key] -%}
+{%- assign og_alt = page.og_image_alt | default: site.og_image_alt[lang_key] -%}
+{%- assign v = site.time | date: '%s' -%}
+{%- if lang_key == 'es' -%}{%- assign og_locale = 'es_ES' -%}{%- assign og_locale_alt = 'en_US' -%}{%- assign logo_home = '/' -%}{%- else -%}{%- assign og_locale = 'en_US' -%}{%- assign og_locale_alt = 'es_ES' -%}{%- assign logo_home = '/en/' -%}{%- endif -%}
+<html lang="{{ lang_key }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="color-scheme" content="dark light">
+
+  <title>{{ full_title }}</title>
+  <meta name="description" content="{{ desc }}">
+  <meta name="robots" content="{{ page.robots | default: 'index,follow' }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  <meta name="theme-color" content="#07120D" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ full_title }}">
+  <meta property="og:description" content="{{ og_desc }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}{{ og_image }}">
+  <meta property="og:image:secure_url" content="{{ site.url }}{{ og_image }}">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ og_alt }}">
+  <meta property="og:locale" content="{{ og_locale }}">
+  <meta property="og:locale:alternate" content="{{ og_locale_alt }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ full_title }}">
+  <meta name="twitter:description" content="{{ tw_desc }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ og_image }}">
+  <meta name="twitter:image:alt" content="{{ og_alt }}">
+
+  <link rel="alternate" hreflang="es" href="{{ site.url }}{{ page.canonical_es }}">
+  <link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.canonical_en }}">
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.canonical_es }}">
+
+  <link rel="icon" href="/assets/favicons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
+  <meta name="application-name" content="{{ site.title }}">
+  {%- if page.app_jsonld %}
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"MobileApplication","name":"Marlek","operatingSystem":"iOS, iPadOS","applicationCategory":"EducationApplication","inLanguage":["es","en"],"url":"{{ site.url }}{{ page.url }}","downloadUrl":"{{ site.app_store_url }}","installUrl":"{{ site.app_store_url }}","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Person","name":"Slime@YT"},"publisher":{"@type":"Organization","name":"KHASSINX","legalName":"{{ site.org_legal_name }}","url":"https://khassinx.com"}}
+  </script>
+  {%- endif %}
+
+  <link rel="preload" href="/assets/fonts/geist-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/tokens.css?v={{ v }}">
+  <link rel="stylesheet" href="/assets/css/primitives.css?v={{ v }}">
+  <link rel="stylesheet" href="{{ site.app_tokens_css }}?v={{ v }}">
+  <link rel="stylesheet" href="/assets/css/app.css?v={{ v }}">
+  {% for css in page.extra_css %}<link rel="stylesheet" href="{{ css }}?v={{ v }}">{% endfor %}
+  <script src="/assets/js/theme.js?v={{ v }}"></script>
+</head>
+<body>
+<a class="skip" href="#main">{{ ui.skip_to_main }}</a>
+<header class="head wrap">
+  <a class="wordmark" href="{{ logo_home }}"><img src="/assets/favicons/icon-192.png" width="192" height="192" alt=""><span>{{ site.title }}<span class="tm" aria-hidden="true">™</span></span></a>
+  <nav aria-label="{{ ui.nav_primary }}">{% for item in nav_items %}<a href="{{ item.url }}">{{ item.title }}</a>{% endfor %}{% if lang_key == 'es' %}<a href="{{ page.canonical_en }}" hreflang="en" lang="en">EN</a>{% else %}<a href="{{ page.canonical_es }}" hreflang="es" lang="es">ES</a>{% endif %}</nav>
+</header>
+<main id="main">
+{{ content }}
+</main>
+<footer class="foot">
+  <div class="wrap foot-row">
+    <p>© {{ 'now' | date: '%Y' }} {{ site.org_legal_name }} · <a href="{{ ui.umbrella_url }}">{{ ui.part_of }}</a></p>
+    <nav aria-label="{{ ui.nav_footer }}">
+      {%- for item in footer_items %}
+      <a href="{{ item.url }}">{{ item.title }}</a>
+      {%- endfor %}
+    </nav>
+    <p class="theme" hidden><label for="theme">{{ ui.theme }}</label><select id="theme" autocomplete="off"><option value="system">{{ ui.theme_system }}</option><option value="light">{{ ui.theme_light }}</option><option value="dark">{{ ui.theme_dark }}</option></select></p>
+    {% if lang_key == 'es' -%}
+    <p class="lang" aria-label="{{ ui.lang_selector }}"><span aria-current="true" lang="es">ES</span> · <a href="{{ page.canonical_en }}" hreflang="en" lang="en">EN</a></p>
+    {%- else -%}
+    <p class="lang" aria-label="{{ ui.lang_selector }}"><a href="{{ page.canonical_es }}" hreflang="es" lang="es">ES</a> · <span aria-current="true" lang="en">EN</span></p>
+    {%- endif %}
+  </div>
+  <div class="wrap fine">
+    <p>{{ ui.credit }}</p>
+    <p>{{ ui.trademarks }}</p>
+  </div>
+</footer>
+</body>
+</html>
