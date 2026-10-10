@@ -19,18 +19,7 @@ og_image_alt:
   es: "Marlek — un código secreto hecho de emojis y símbolos."
   en: "Marlek — a secret code made of emoji and symbols."
 
-nav:
-  es:
-    - title: Soporte
-      url: /soporte/
-    - title: Privacidad
-      url: /privacidad/
-  en:
-    - title: Support
-      url: /en/support/
-    - title: Privacy
-      url: /en/privacy/
-
+# Sin nav: el encabezado es sólo el wordmark; cada destino ya está en el pie.
 footer_nav:
   es:
     - title: Soporte
