@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {%- assign lang_key = page.lang | default: site.lang -%}
-{%- assign nav_items = site.nav[lang_key] -%}
+{%- assign nav_items = site.nav[lang_key] | default: site.nav.en -%}
 {%- assign footer_items = site.footer_nav[lang_key] -%}
 {%- assign ui = site.ui_strings[lang_key] -%}
 {%- assign full_title = page.head_title | default: site.title -%}
@@ -16,7 +16,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; base-uri 'self'; form-action 'self'">
   <meta name="color-scheme" content="dark light">
 
   <title>{{ full_title }}</title>
@@ -83,25 +83,31 @@
 <a class="skip" href="#main">{{ ui.skip_to_main }}</a>
 <header class="head wrap">
   <a class="wordmark" href="{{ logo_home }}"><img src="/assets/favicons/icon-192.png" width="192" height="192" alt=""><span>{{ site.title }}<span class="tm" aria-hidden="true">™</span></span></a>
-  <nav aria-label="{{ ui.nav_primary }}">{% for item in nav_items %}<a href="{{ item.url }}">{{ item.title }}</a>{% endfor %}{% if lang_key == 'es' %}<a href="{{ page.canonical_en }}" hreflang="en" lang="en">EN</a>{% else %}<a href="{{ page.canonical_es }}" hreflang="es" lang="es">ES</a>{% endif %}</nav>
+  {%- if nav_items %}
+  <nav aria-label="{{ ui.nav_primary }}">{% for item in nav_items %}<a href="{{ item.url }}">{{ item.title }}</a>{% endfor %}</nav>
+  {%- endif %}
 </header>
 <main id="main">
 {{ content }}
 </main>
 <footer class="foot">
-  <div class="wrap foot-row">
-    <p>© {{ 'now' | date: '%Y' }} <a href="{{ ui.umbrella_url }}">{{ site.org_legal_name }}</a></p>
+  <div class="wrap">
     <nav aria-label="{{ ui.nav_footer }}">
       {%- for item in footer_items %}
       <a href="{{ item.url }}">{{ item.title }}</a>
       {%- endfor %}
     </nav>
-    {% include theme-switch.html t=ui %}
-    {% if lang_key == 'es' -%}
-    <p class="lang" aria-label="{{ ui.lang_selector }}"><span aria-current="true" lang="es">ES</span> · <a href="{{ page.canonical_en }}" hreflang="en" lang="en">EN</a></p>
-    {%- else -%}
-    <p class="lang" aria-label="{{ ui.lang_selector }}"><a href="{{ page.canonical_es }}" hreflang="es" lang="es">ES</a> · <span aria-current="true" lang="en">EN</span></p>
-    {%- endif %}
+    <div class="foot-row">
+      <p>© {{ 'now' | date: '%Y' }} <a href="{{ ui.umbrella_url }}">{{ site.org_legal_name }}</a></p>
+      <div class="foot-prefs">
+        {% include theme-switch.html t=ui %}
+        {% if lang_key == 'es' -%}
+        <p class="lang" aria-label="{{ ui.lang_selector }}"><span aria-current="true" lang="es">ES</span> · <a href="{{ page.canonical_en }}" hreflang="en" lang="en">EN</a></p>
+        {%- else -%}
+        <p class="lang" aria-label="{{ ui.lang_selector }}"><a href="{{ page.canonical_es }}" hreflang="es" lang="es">ES</a> · <span aria-current="true" lang="en">EN</span></p>
+        {%- endif %}
+      </div>
+    </div>
   </div>
   <div class="wrap fine">
     <p>{{ ui.credit }}</p>
