@@ -60,6 +60,7 @@
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
   <meta name="application-name" content="{{ site.title }}">
@@ -89,7 +90,7 @@
 </main>
 <footer class="foot">
   <div class="wrap foot-row">
-    <p>© {{ 'now' | date: '%Y' }} {{ site.org_legal_name }} · <a href="{{ ui.umbrella_url }}">{{ ui.part_of }}</a></p>
+    <p>© {{ 'now' | date: '%Y' }} <a href="{{ ui.umbrella_url }}">{{ site.org_legal_name }}</a></p>
     <nav aria-label="{{ ui.nav_footer }}">
       {%- for item in footer_items %}
       <a href="{{ item.url }}">{{ item.title }}</a>
