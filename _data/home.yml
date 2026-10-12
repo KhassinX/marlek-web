@@ -45,12 +45,22 @@ es:
       body: '<span class="handle-cipher" aria-hidden="true">🟢🔒🔸🌙🅴@🆈🆃</span>'
   faq_h: "Preguntas frecuentes"
   faq:
+    # home: false = solo en soporte; la portada muestra el resto, en este orden.
+    - q: "¿Qué es Marlek?"
+      a: "Marlek es un idioma cifrado: un código secreto donde cada letra, número o símbolo se cambia por otro carácter o emoji según una tabla fija. Lo inventó su creador (Slime@YT). La app traduce del español a Marlek y de vuelta."
+      home: false
     - q: "¿Necesito internet para usarla?"
       a: "No. Toda la traducción ocurre en tu dispositivo. Marlek funciona sin conexión."
-    - q: "¿El teclado puede ver lo que escribo?"
-      a: "No. El teclado Marlek funciona sin «Acceso Completo»: solo convierte lo que tipeas a Marlek. No guarda lo que escribes ni tiene acceso a internet."
+    - q: "¿Por qué los emojis se ven raros si los vuelvo a escribir?"
+      a: "Algunos símbolos de Marlek son emojis con marcas invisibles. Cópialos con el botón de copiar en lugar de volver a escribirlos a mano; así se conservan exactos y la traducción de vuelta funciona perfecto."
+      home: false
     - q: "¿Mis mensajes se sincronizan entre el iPhone y el iPad?"
-      a: "Sí, si los dos tienen iCloud activado con la misma cuenta. Tus mensajes guardados y tu progreso en «Practicar» se guardan en tu propio iCloud, al que nosotros no tenemos acceso. Sin iCloud, quedan sólo en cada dispositivo."
+      a: "Sí, si los dos tienen iCloud activado con la misma cuenta. Tus mensajes guardados y tu progreso en «Practicar» se guardan en tu propio iCloud, al que nosotros no tenemos acceso. Sin iCloud, quedan solo en cada dispositivo. Más detalles en la <a href=\"/privacidad/\">política de privacidad</a>."
+    - q: "¿El teclado puede ver lo que escribo?"
+      a: "No. El teclado Marlek funciona sin «Acceso Completo»: solo convierte a Marlek lo que escribes. No lo guarda ni tiene acceso a internet."
+    - q: "¿Marlek recopila mis datos?"
+      a: "No. Marlek no recopila ningún dato. Sin cuentas, sin anuncios, sin rastreo. Más detalles en la <a href=\"/privacidad/\">política de privacidad</a>."
+      home: false
     - q: "¿En qué dispositivos funciona?"
       a: "Marlek es para iPhone y iPad. En iPad se adapta con una barra lateral y un ancho de lectura cómodo."
 en:
@@ -98,11 +108,21 @@ en:
       body: '<span class="handle-cipher" aria-hidden="true">🟢🔒🔸🌙🅴@🆈🆃</span>'
   faq_h: "Frequently asked questions"
   faq:
+    # home: false = solo en soporte; la portada muestra el resto, en este orden.
+    - q: "What is Marlek?"
+      a: "Marlek is a cipher language: a secret code where every letter, number, or symbol is swapped for another character or emoji following a fixed table. Its creator (Slime@YT) invented it. The app translates from Spanish to Marlek and back."
+      home: false
     - q: "Do I need internet to use it?"
       a: "No. All translation happens on your device. Marlek works offline."
+    - q: "Why do emoji look odd if I retype them?"
+      a: "Some Marlek symbols are emoji with invisible marks. Copy them with the copy button instead of retyping them by hand; that keeps them exact so translating back works perfectly."
+      home: false
+    - q: "Do my messages sync between iPhone and iPad?"
+      a: "Yes, if both have iCloud turned on with the same account. Your saved messages and your Practice progress are kept in your own iCloud, which we cannot access. Without iCloud, they stay on each device only. More details in the <a href=\"/en/privacy/\">privacy policy</a>."
     - q: "Can the keyboard see what I type?"
       a: "No. The Marlek keyboard works without “Full Access”: it only converts what you type into Marlek. It does not save what you write and has no internet access."
-    - q: "Do my messages sync between iPhone and iPad?"
-      a: "Yes, if both have iCloud turned on with the same account. Your saved messages and your Practice progress are kept in your own iCloud, which we cannot access. Without iCloud, they stay on each device only."
+    - q: "Does Marlek collect my data?"
+      a: "No. Marlek collects no data. No accounts, no ads, no tracking. More details in the <a href=\"/en/privacy/\">privacy policy</a>."
+      home: false
     - q: "Which devices does it work on?"
       a: "Marlek is for iPhone and iPad. On iPad it adapts with a sidebar and a comfortable reading width."
