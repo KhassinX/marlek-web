@@ -22,21 +22,11 @@ updated: 2026-10-12
 <h3>Mis mensajes</h3>
 <p>Toca «Guardar» en el traductor y el mensaje queda en la pestaña «Mis mensajes», donde puedes ponerle un título, buscarlo o eliminarlo. Si usas iCloud, lo ves en todos tus dispositivos.</p>
 
-<h2>Preguntas frecuentes</h2>
-<h3>¿Qué es Marlek?</h3>
-<p>Marlek es un idioma cifrado: un código secreto donde cada letra, número o símbolo se cambia por otro carácter o emoji según una tabla fija. Lo inventó su creador (Slime@YT). La app traduce del español a Marlek y de vuelta.</p>
-<h3>¿Necesito internet para usarla?</h3>
-<p>No. Toda la traducción ocurre en tu dispositivo. Marlek funciona sin conexión.</p>
-<h3>¿Por qué los emojis se ven raros si los retipeo?</h3>
-<p>Algunos símbolos de Marlek son emojis con marcas invisibles. Cópialos con el botón de copiar en lugar de volver a escribirlos a mano; así se conservan exactos y la traducción de vuelta funciona perfecto.</p>
-<h3>¿Mis mensajes se sincronizan entre el iPhone y el iPad?</h3>
-<p>Sí, si los dos tienen iCloud activado con la misma cuenta. Tus mensajes guardados y tu progreso en «Practicar» se guardan en tu propio iCloud, al que nosotros no tenemos acceso. Sin iCloud, quedan sólo en cada dispositivo. Más detalles en la <a href="/privacidad/">política de privacidad</a>.</p>
-<h3>¿El teclado puede ver lo que escribo?</h3>
-<p>No. El teclado Marlek funciona sin «Acceso Completo»: solo convierte lo que tipeas a Marlek. No guarda lo que escribes ni tiene acceso a internet.</p>
-<h3>¿Marlek recopila mis datos?</h3>
-<p>No. Marlek no recopila ningún dato. Sin cuentas, sin anuncios, sin rastreo. Más detalles en la <a href="/privacidad/">política de privacidad</a>.</p>
-<h3>¿En qué dispositivos funciona?</h3>
-<p>Marlek es para iPhone y iPad. En iPad se adapta con una barra lateral y un ancho de lectura cómodo.</p>
+<h2>{{ site.data.home.es.faq_h }}</h2>
+{%- for f in site.data.home.es.faq %}
+<h3>{{ f.q }}</h3>
+<p>{{ f.a }}</p>
+{%- endfor %}
 
 <h2>¿Necesitas ayuda?</h2>
 <p>Escríbenos a <a href="mailto:hello@khassinx.com">hello@khassinx.com</a> y te respondemos en español o inglés en 3 días hábiles.</p>
