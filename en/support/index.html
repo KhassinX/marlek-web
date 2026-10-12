@@ -22,21 +22,11 @@ updated: 2026-10-12
 <h3>My Messages</h3>
 <p>Tap Save in the translator and the message goes to the My Messages tab, where you can give it a title, search it or delete it. If you use iCloud, you see it on all your devices.</p>
 
-<h2>Frequently asked questions</h2>
-<h3>What is Marlek?</h3>
-<p>Marlek is a cipher language: a secret code where every letter, number, or symbol is swapped for another character or emoji following a fixed table. Its creator (Slime@YT) invented it. The app translates from Spanish to Marlek and back.</p>
-<h3>Do I need internet to use it?</h3>
-<p>No. All translation happens on your device. Marlek works offline.</p>
-<h3>Why do emoji look odd if I retype them?</h3>
-<p>Some Marlek symbols are emoji with invisible marks. Copy them with the copy button instead of retyping them by hand; that keeps them exact so translating back works perfectly.</p>
-<h3>Do my messages sync between iPhone and iPad?</h3>
-<p>Yes, if both have iCloud turned on with the same account. Your saved messages and your Practice progress are kept in your own iCloud, which we cannot access. Without iCloud, they stay on each device only. More details in the <a href="/en/privacy/">privacy policy</a>.</p>
-<h3>Can the keyboard see what I type?</h3>
-<p>No. The Marlek keyboard works without "Full Access": it only converts what you type into Marlek. It does not save what you write and has no internet access.</p>
-<h3>Does Marlek collect my data?</h3>
-<p>No. Marlek collects no data. No accounts, no ads, no tracking. More details in the <a href="/en/privacy/">privacy policy</a>.</p>
-<h3>Which devices does it work on?</h3>
-<p>Marlek is for iPhone and iPad. On iPad it adapts with a sidebar and a comfortable reading width.</p>
+<h2>{{ site.data.home.en.faq_h }}</h2>
+{%- for f in site.data.home.en.faq %}
+<h3>{{ f.q }}</h3>
+<p>{{ f.a }}</p>
+{%- endfor %}
 
 <h2>Need help?</h2>
 <p>Email us at <a href="mailto:hello@khassinx.com">hello@khassinx.com</a> and we'll reply in English or Spanish within 3 business days.</p>
