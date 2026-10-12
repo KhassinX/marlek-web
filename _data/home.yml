@@ -1,0 +1,108 @@
+# Home page, read by _includes/home.html (the common layer) and _includes/hero-aside.html (Marlek's).
+# Every line comes from what this site already said (home, /soporte/, /privacidad/, /terminos/), not new claims.
+es:
+  h1: "Tu propio código secreto"
+  lead: "Marlek convierte lo que escribes en español en un código secreto hecho de emojis y símbolos, y lo traduce de vuelta. Para mandar mensajes secretos entre amigos y hermanos."
+  badge_alt: "Descárgalo en el App Store"
+  facts_label: "De un vistazo"
+  facts:
+    - "Para iPhone y iPad"
+    - "Gratis"
+    - "Sin cuentas, sin anuncios, sin rastreo"
+  cipher_plain: "HOLA"
+  cipher_secret: "🌙 ⭕️ 🔒 🔺"
+  cipher_alt: "HOLA escrito en Marlek"
+  cipher_caption: "Ejemplo ilustrativo. La tabla real vive dentro de la app."
+  privacy_h: "Privacidad"
+  manifest:
+    - { k: "Datos recopilados", v: "Ninguno. Etiqueta del App Store: «Datos no recopilados»" }
+    - { k: "Cuenta", v: "Ninguna" }
+    - { k: "Dónde viven tus datos", v: "En tu dispositivo y, si usas iCloud, en tu propio iCloud, al que nosotros no tenemos acceso" }
+    - { k: "Rastreo", v: "Ninguno. Sin anuncios ni analítica de terceros" }
+    - { k: "Conexión", v: "No hace falta internet para traducir ni para practicar" }
+    - { k: "Teclado", v: "Funciona sin «Acceso Completo»: no guarda lo que escribes ni tiene acceso a la red" }
+  policy: "Política de privacidad"
+  reach: "Lo que sí nos llega: los informes de fallos que Apple nos envía sin datos que te identifiquen, si en tu dispositivo está activado «Compartir con desarrolladores», y los correos que nos escribes."
+  inside_h: "Lo que puedes hacer"
+  inside:
+    - { k: '<span aria-hidden="true">🔁</span> Traductor', v: "Escribe en español y mira el Marlek al instante. O al revés: pega un mensaje secreto y léelo en español. Funciona en los dos sentidos, y también con Siri, Atajos y el Centro de control." }
+    - { k: '<span aria-hidden="true">⌨️</span> Teclado Marlek', v: "Un teclado para el sistema: actívalo y escribe en Marlek dentro de cualquier app, en mensajes, notas, donde quieras. Sin Acceso Completo." }
+    - { k: '<span aria-hidden="true">📖</span> Tabla de claves', v: "La hoja de claves completa, siempre a mano. Cada letra y símbolo con su equivalente en Marlek, para aprender o consultar." }
+    - { k: '<span aria-hidden="true">🎯</span> Practicar', v: "Aprende el código jugando, sin la hoja de claves: Contrarreloj, Escribe la letra, Descifra el mensaje y Elige la respuesta. Con racha de días y rangos, de Iniciado a Maestro Marlek." }
+    - { k: '<span aria-hidden="true">🃏</span> Tarjetas para compartir', v: "Convierte un mensaje corto o tu rango en una tarjeta, en formato historia o cuadrada, para tus chats y tus historias." }
+    - { k: '<span aria-hidden="true">💬</span> Mis mensajes', v: "Guarda los mensajes que quieras volver a ver, ponles un título y búscalos. Si usas iCloud, los ves en todos tus dispositivos." }
+  bands:
+    - id: que-es
+      h: "¿Qué es Marlek?"
+      lead: "Marlek es un idioma cifrado: cada letra, número o símbolo se cambia por otro carácter o emoji, siguiendo una tabla fija. Lo inventó su creador con papel y lápiz; esta app lo lleva a tu iPhone y iPad."
+    - id: familia
+      h: "Para chicos y familia"
+      lead: "Pensado para mandar mensajes secretos entre amigos y hermanos. Lúdico, en español primero, fácil de usar."
+      body: "Diseñado para iPhone y iPad con el lenguaje visual Liquid Glass de Apple. Rápido, claro y a tono con tu dispositivo."
+    - id: creador
+      h: "Una creación de Slime@YT"
+      lead: "El idioma Marlek, su cifrado y su tabla son obra de su creador. Publicado por KHASSINX LLC."
+      body: '<span class="handle-cipher" aria-hidden="true">🟢🔒🔸🌙🅴@🆈🆃</span>'
+  faq_h: "Preguntas frecuentes"
+  faq:
+    - q: "¿Necesito internet para usarla?"
+      a: "No. Toda la traducción ocurre en tu dispositivo. Marlek funciona sin conexión."
+    - q: "¿El teclado puede ver lo que escribo?"
+      a: "No. El teclado Marlek funciona sin «Acceso Completo»: solo convierte lo que tipeas a Marlek. No guarda lo que escribes ni tiene acceso a internet."
+    - q: "¿Mis mensajes se sincronizan entre el iPhone y el iPad?"
+      a: "Sí, si los dos tienen iCloud activado con la misma cuenta. Tus mensajes guardados y tu progreso en «Practicar» se guardan en tu propio iCloud, al que nosotros no tenemos acceso. Sin iCloud, quedan sólo en cada dispositivo."
+    - q: "¿En qué dispositivos funciona?"
+      a: "Marlek es para iPhone y iPad. En iPad se adapta con una barra lateral y un ancho de lectura cómodo."
+en:
+  h1: "Your own secret code"
+  lead: "Marlek turns what you write in Spanish into a secret code made of emoji and symbols, and translates it right back. For sending secret messages between friends and siblings."
+  badge_alt: "Download on the App Store"
+  facts_label: "At a glance"
+  facts:
+    - "For iPhone and iPad"
+    - "Free"
+    - "No accounts, no ads, no tracking"
+  cipher_plain: "HELLO"
+  cipher_secret: "🌙 ⭕️ 🔒 🔒 🔺"
+  cipher_alt: "HELLO written in Marlek"
+  cipher_caption: "Illustrative example. The real table lives inside the app."
+  privacy_h: "Privacy"
+  manifest:
+    - { k: "Data collected", v: "None. App Store label: “Data Not Collected”" }
+    - { k: "Account", v: "None" }
+    - { k: "Where your data lives", v: "On your device and, if you use iCloud, in your own iCloud, which we cannot access" }
+    - { k: "Tracking", v: "None. No ads and no third-party analytics" }
+    - { k: "Connection", v: "No internet needed to translate or to practice" }
+    - { k: "Keyboard", v: "Works without “Full Access”: it does not save what you write and has no network access" }
+  policy: "Privacy Policy"
+  reach: "What does reach us: crash reports that Apple sends us without data that identifies you, if “Share With App Developers” is on in your device settings, and the emails you send us."
+  inside_h: "What you can do"
+  inside:
+    - { k: '<span aria-hidden="true">🔁</span> Translator', v: "Type in Spanish and watch the Marlek appear instantly. Or the other way around: paste a secret message and read it in Spanish. It works both ways, and with Siri, Shortcuts and Control Center too." }
+    - { k: '<span aria-hidden="true">⌨️</span> Marlek keyboard', v: "A system keyboard: turn it on and write Marlek inside any app, in messages, notes, anywhere. No Full Access required." }
+    - { k: '<span aria-hidden="true">📖</span> Key table', v: "The full key sheet, always within reach. Every letter and symbol with its Marlek equivalent, to learn or look up." }
+    - { k: '<span aria-hidden="true">🎯</span> Practice', v: "Learn the code by playing, without the key sheet: Time Attack, Write the Letter, Decode the Message and Choose the Answer. With a day streak and ranks, from Initiate to Marlek Master." }
+    - { k: '<span aria-hidden="true">🃏</span> Share cards', v: "Turn a short message or your rank into a card, in story or square format, for your chats and stories." }
+    - { k: '<span aria-hidden="true">💬</span> My Messages', v: "Save the messages you want to see again, give them a title and search them. If you use iCloud, you see them on all your devices." }
+  bands:
+    - id: what-is
+      h: "What is Marlek?"
+      lead: "Marlek is a cipher language: every letter, number, or symbol is swapped for another character or emoji, following a fixed table. Its creator invented it with pen and paper; this app brings it to your iPhone and iPad."
+    - id: family
+      h: "Kid & family friendly"
+      lead: "Made for sending secret messages between friends and siblings. Playful, Spanish-first, easy to use."
+      body: "Built for iPhone and iPad with Apple's Liquid Glass design. Fast, clear, and right at home on your device."
+    - id: creator
+      h: "A creation by Slime@YT"
+      lead: "The Marlek language, its cipher, and its table are the work of its creator. Published by KHASSINX LLC."
+      body: '<span class="handle-cipher" aria-hidden="true">🟢🔒🔸🌙🅴@🆈🆃</span>'
+  faq_h: "Frequently asked questions"
+  faq:
+    - q: "Do I need internet to use it?"
+      a: "No. All translation happens on your device. Marlek works offline."
+    - q: "Can the keyboard see what I type?"
+      a: "No. The Marlek keyboard works without “Full Access”: it only converts what you type into Marlek. It does not save what you write and has no internet access."
+    - q: "Do my messages sync between iPhone and iPad?"
+      a: "Yes, if both have iCloud turned on with the same account. Your saved messages and your Practice progress are kept in your own iCloud, which we cannot access. Without iCloud, they stay on each device only."
+    - q: "Which devices does it work on?"
+      a: "Marlek is for iPhone and iPad. On iPad it adapts with a sidebar and a comfortable reading width."

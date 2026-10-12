@@ -1,0 +1,7 @@
+{%- comment -%} Columna derecha del hero: propia de cada app (L, h y ui vienen de home.html). {%- endcomment -%}
+  <figure class="cipher">
+    <p class="cipher-plain">{{ h.cipher_plain }}</p>
+    <span class="cipher-arrow" aria-hidden="true">↓</span>
+    <p class="cipher-secret" lang="zxx" role="img" aria-label="{{ h.cipher_alt }}">{{ h.cipher_secret }}</p>
+    <figcaption>{{ h.cipher_caption }}</figcaption>
+  </figure>
