@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Marlek — your own secret code">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Marlek: your own secret code">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#04241A"/>
@@ -31,7 +31,7 @@
     <text x="500" y="270" fill="#ECF7F0" font-size="84" font-weight="700" letter-spacing="-2">Marlek</text>
     <text x="500" y="350" fill="#5BFB6A" font-size="40" font-weight="600">Your own secret code</text>
     <text x="500" y="410" fill="#A6BBB0" font-size="30" font-weight="400">Turn Spanish into a code of emoji</text>
-    <text x="500" y="450" fill="#A6BBB0" font-size="30" font-weight="400">and symbols — and back again.</text>
+    <text x="500" y="450" fill="#A6BBB0" font-size="30" font-weight="400">and symbols, and back again.</text>
     <text x="500" y="525" fill="#7E948A" font-size="24" font-weight="400">iPhone · iPad  ·  created by Slime@YT</text>
   </g>
 </svg>

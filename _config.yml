@@ -1,80 +1,107 @@
 title: Marlek
+short_name: Marlek
+description: "Marlek traduce del español a un código secreto hecho de emojis y símbolos, y de vuelta. Mensajes secretos entre amigos y hermanos. App para iPhone y iPad."
 url: https://marlek.khassinx.com
-lang: es
 
-# Legal entity (KHASSINX LLC — Florida single-member LLC). The Marlek language,
+# The root is Spanish: / and /en/, with the URLs the app has fixed (/privacidad/, /soporte/…).
+lang: es
+home_url:
+  es: /
+  en: /en/
+privacy_url:
+  es: /privacidad/
+  en: /en/privacy/
+# Browser chrome follows Marlek's ground (assets/css/app.css), not the studio's.
+theme_color:
+  dark: "#07120D"
+  light: "#FFFFFF"
+
+# Legal entity (KHASSINX LLC, Florida single-member LLC). The Marlek language,
 # its cipher and its table are the work of its creator, Slime@YT.
 org_legal_name: "KHASSINX LLC"
-
-# Layer 2: the Marlek palette, re-bound over the Layer 1 tokens
-app_tokens_css: /assets/css/marlek-tokens.css
+org_founding_date: "2026-06-01"
 
 app_store_url: https://apps.apple.com/app/id6777882318
 
-# Open Graph image, by locale (same pattern as ASVAB Coach) — overridable per page
+# JSON-LD MobileApplication on the home page (_includes/home.html). Facts of the app, measured in its
+# project.yml (iPhone and iPad only, education category, no StoreKit) and its String Catalog (es, en).
+app_schema:
+  name: "Marlek"
+  operating_system: "iOS, iPadOS"
+  category: EducationalApplication
+  price: "0"
+  price_currency: USD
+  offer_category: Free
+  languages: ["es", "en"]
+  free: true
+  creator: "Slime@YT"
+
+favicon_svg: /assets/favicons/favicon.svg
+favicon_32: /assets/favicons/favicon-32.png
+favicon_16: /assets/favicons/favicon-16.png
+apple_touch_icon: /assets/favicons/apple-touch-icon.png
+
+# Open Graph image, by locale — overridable per page
 og_image_default:
   es: /assets/og/og-image-es.png
   en: /assets/og/og-image-en.png
 og_image_alt:
-  es: "Marlek — un código secreto hecho de emojis y símbolos."
-  en: "Marlek — a secret code made of emoji and symbols."
+  es: "Marlek: un código secreto hecho de emojis y símbolos."
+  en: "Marlek: a secret code made of emoji and symbols."
 
-# Sin nav: el encabezado es sólo el wordmark; cada destino ya está en el pie.
 footer_nav:
   es:
     - title: Soporte
       url: /soporte/
     - title: Privacidad
       url: /privacidad/
-    - title: Seguridad
-      url: /security/
     - title: Términos
       url: /terminos/
-    - title: Contacto
-      url: mailto:hello@khassinx.com
+    - title: Seguridad
+      url: /security/
   en:
     - title: Support
       url: /en/support/
     - title: Privacy
       url: /en/privacy/
-    - title: Security
-      url: /en/security/
     - title: Terms
       url: /en/terms/
-    - title: Contact
-      url: mailto:hello@khassinx.com
+    - title: Security
+      url: /en/security/
 
 ui_strings:
   es:
     skip_to_main: "Saltar al contenido principal"
-    nav_primary: "Principal"
     nav_footer: "Pie de página"
-    lang_selector: "Selector de idioma"
     umbrella_url: "https://khassinx.com/es/"
     last_updated: "Última actualización"
     effective: "Vigente desde el"
     version: "Versión"
+    in_short: "En resumen"
+    on_this_page: "En esta página"
+    related: "Relacionado"
+    language: "Idioma"
     theme: "Tema"
     theme_system: "Sistema"
     theme_light: "Claro"
     theme_dark: "Oscuro"
-    credit: 'App publicada por <a href="https://khassinx.com">KHASSINX LLC</a> · creada por Slime@YT'
-    trademarks: "iPhone, iPad, App Store, iCloud e iPadOS son marcas comerciales de Apple Inc., registradas en EE. UU. y otros países. Liquid Glass es una marca comercial de Apple Inc. IOS es una marca comercial o marca registrada de Cisco en EE. UU. y otros países y se utiliza bajo licencia. Las demás marcas comerciales pertenecen a sus respectivos propietarios."
+    disclaimer: "iPhone, iPad, App Store, iCloud e iPadOS son marcas comerciales de Apple Inc., registradas en EE. UU. y otros países. Liquid Glass es una marca comercial de Apple Inc. IOS es una marca comercial o marca registrada de Cisco en EE. UU. y otros países y se utiliza bajo licencia. Las demás marcas comerciales pertenecen a sus respectivos propietarios."
   en:
     skip_to_main: "Skip to main content"
-    nav_primary: "Main"
     nav_footer: "Footer"
-    lang_selector: "Language selector"
     umbrella_url: "https://khassinx.com/"
     last_updated: "Last updated"
     effective: "Effective"
     version: "Version"
+    in_short: "In short"
+    on_this_page: "On this page"
+    related: "Related"
+    language: "Language"
     theme: "Theme"
     theme_system: "System"
     theme_light: "Light"
     theme_dark: "Dark"
-    credit: 'Published by <a href="https://khassinx.com">KHASSINX LLC</a> · created by Slime@YT'
-    trademarks: "iPhone, iPad, App Store, iCloud, and iPadOS are trademarks of Apple Inc., registered in the U.S. and other countries. Liquid Glass is a trademark of Apple Inc. IOS is a trademark or registered trademark of Cisco in the U.S. and other countries and is used under license. All other trademarks are the property of their respective owners."
+    disclaimer: "iPhone, iPad, App Store, iCloud, and iPadOS are trademarks of Apple Inc., registered in the U.S. and other countries. Liquid Glass is a trademark of Apple Inc. IOS is a trademark or registered trademark of Cisco in the U.S. and other countries and is used under license. All other trademarks are the property of their respective owners."
 
 markdown: kramdown
 
